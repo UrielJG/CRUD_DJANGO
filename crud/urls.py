@@ -19,5 +19,7 @@ from personas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.helloword)
+    path('', views.person, name='inicio'),
+    path('update/<int:per_id>/',views.modificar, name='upd'),
+    path('<int:per_id>/', views.eliminar, name='del')    
 ]
